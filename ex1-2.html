@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>예제2</title>
+</head>
+<body>
+	<h1>BMI 계산하기</h1>
+	키 : <input type="text" id="inpHeight">
+	몸무게 : <input type="text" id="inpWeight">
+	<button type="button" class="btn_bmi">계산하기</button>
+	BMI 지수 : <span class="txt_bmi"></span>
+	<script>
+		var btn = document.querySelector('.btn_bmi');
+		btn.addEventListener('click', function() {
+			var myHeight = inpHeight.value * 0.01;
+			var myWeight = inpWeight.value;
+
+			var bmi = myWeight / (myHeight * myHeight);
+			document.querySelector('.txt_bmi').innerHTML = bmi;
+		})
+		
+	</script>
+</body>
+</html>
