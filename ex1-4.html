@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>문자열의 길이 확인하기</title>
+</head>
+<body>
+	<input type="text" class="inp_txt">
+	<button type="button" class="btn">길이는?</button>
+	<span class="txt_result"></span>
+	<script>
+		var btn = document.querySelector('.btn');
+
+		btn.addEventListener('click', function () {
+			var text = document.querySelector('.inp_txt').value;
+			var textLength = text.length;
+			var result = document.querySelector('.txt_result');
+			result.innerHTML = textLength;ㅋ
+		});
+	</script>
+</body>
+</html>

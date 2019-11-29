@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>구구단 2,3단 만들기</title>
+</head>
+<body>
+	<h2>구구단 만들기</h2>
+	<h3 class="txt_gugudan"></h3>단
+	<input type="">
+	<script>
+		
+		// document.querySelector('result').innerHTML = gugudan();
+		var gugudan = prompt("몇단을 출력할까요?");
+		var gugudan2 = Number(gugudan);
+		document.querySelector('.txt_gugudan').innerHTML = gugudan2;
+		// for(var i = 0; i <= 9; i++) {
+		// 	document.write(gugudan2 + " 곱하기 " + i + " = " + gugudan2 * i + "<br>");
+		// }
+		var i = 0;
+		while(i <= 9) {
+			
+			document.write(gugudan2 + " 곱하기 " + i + " = " + gugudan2 * i + "<br>");
+			i++;
+		}
+		
+	</script>
+</body>
+</html>

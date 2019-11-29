@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>섭씨를 화씨로 바꾸기</title>
+</head>
+<body>
+	섭씨 : <input type="number" class="inp_c">℃
+	<button type="button" onclick="btnClick()">변환</button>
+	화씨 : <span class="txt_f"></span>℉
+	<script>
+		//  계산식 : ℉ = 9/5*℃ + 32
+		function btnClick() {
+			var c = document.querySelector('.inp_c').value;
+			var f = (9/5) * c + 32;
+			document.querySelector('.txt_f').innerHTML = f;
+		}
+	</script>
+</body>
+</html>
