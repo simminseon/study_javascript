@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>구구단 만들기</title>
+</head>
+<body>
+	<h1>함수 사용해보기</h1>
+	<script>
+		function gugudan(x) {
+			var ret = [];
+			for (var i = 1; i <= 9; i++) {
+				ret[i] = x * i;
+			}
+			return ret;
+		}
+
+		function printResult(x, ret) {
+			document.write("<h2>" + x + "단</h2>");
+			for (var i = 1; i <= 9; i++) {
+				var y = x * 1;
+				document.write(x + " * " + i + " * " + y + "<br>");
+			}
+		}
+
+		function main() {
+			console.log("메인 함수가 실행되었습니다.")
+			for(var n = 2; n <= 9; n++) {
+				var result = gugudan(n);
+				printResult(n, result);
+			}
+		}
+		main();
+	</script>
+</body>
+</html>
