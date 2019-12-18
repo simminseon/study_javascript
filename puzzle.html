@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>퍼즐 맞추기(연습용)</title>
+	<style>
+		.btn_text{width:50px;height:50px;background-color:yellow;margin-right:20px;font-size:20px}
+		.btn{display:block;width:80px;height:40px;background-color:black;color:white;font-size:17px;margin-top:20px}
+		.result{padding-top:20px;font-weight:bold;font-size:30px;color:red}
+	</style>
+</head>
+<body>
+	<h1 id="text"></h1>
+	<script>
+		var str = "hello";
+		document.querySelector("#text").innerHTML = str;
+		var strArray = str.split("");
+		for(var i = 0; i < strArray.length; i++) {
+			var btn = document.createElement('button');
+			btn.className = "btn_text";
+			btn.innerHTML = strArray[i];
+			document.body.appendChild(btn);
+		}
+		var overTurn = document.createElement('button');
+		overTurn.innerHTML = "뒤집기";
+		overTurn.classList.add('btn');
+		overTurn.classList.add('btn_overturn');
+		document.body.appendChild(overTurn);
+		var push = document.createElement('button');
+		push.innerHTML = "밀어내기";
+		push.className = "btn";
+		push.className += " btn_push";
+		document.body.appendChild(push);
+
+		function overTurnHandler() {
+			console.log('뒤집기')
+		}
+		function pushHandler() {
+			console.log("밀어내기")
+		}
+
+		overTurn.addEventListener('click', overTurnHandler);
+		push.addEventListener('click', pushHandler);
+		var result = document.createElement('div');
+		result.classList.add('result');
+		result.innerHTML = "일치합니다."
+		document.body.appendChild(result);
+
+	</script>
+</body>
+</html>
