@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>지뢰찾기</title>
+	<style>
+		table{border-collapse:collapse;}
+		td{width:20px;height:20px;border:1px solid #000}
+	</style>
+</head>
+<body>
+	<input type="number" id="hor" placeholder="가로" value="10">
+	<input type="number" id="ver" placeholder="세로" value="10">
+	<input type="number" id="mine" placeholder="지뢰" value="20">
+	<button id="exec">실행</button>
+	<table id="table">
+		<thead>
+			<tr>
+				<td><span id="timer">0</span>초</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script src="landmine.js"></script>
+</body>
+</html>
