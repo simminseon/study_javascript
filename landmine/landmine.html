@@ -5,7 +5,8 @@
 	<title>지뢰찾기</title>
 	<style>
 		table{border-collapse:collapse;}
-		td{width:20px;height:20px;border:1px solid #000}
+		td{width:20px;height:20px;padding:0;border:1px solid #000;background:#444;text-align:center}
+		td.opened{background:#fff}
 	</style>
 </head>
 <body>
@@ -22,6 +23,7 @@
 		<tbody>
 		</tbody>
 	</table>
+	<div id="result"></div>
 	<script src="landmine.js"></script>
 </body>
 </html>
