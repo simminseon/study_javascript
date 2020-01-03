@@ -69,3 +69,67 @@ for(var i = 1; i <= 100; i++) {
   s += i
 }
 console.log(s);
+
+/*** 12번 ***/
+class Wizard{
+  constructor(health, mana, armor){
+    this.health = health;
+    this.mana = mana;
+    this.armor = armor;
+  }
+  attack(){
+    console.log('파이어볼')
+  }
+}
+const x = new Wizard(545, 210, 10);
+console.log(x.health, x.mana, x.armor);
+x.attack();
+
+/*** 13번 ***/
+const planets = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성'];
+const planetsN = prompt('몇번째 행성 출력을 원하시나요?');
+console.log(planets[planetsN-1]);
+
+/*** 14번 ***/
+const num14 = prompt("숫자를 입력하세요");
+if(num14 % 3 == 0 && num14 != 0) {
+  console.log("짝")
+} else {
+  console.log(num14)
+}
+
+/*** 15번 ***/
+const num15 = prompt('이름을 입력하세요');
+console.log(`안녕하세요 저는 ${num15} 입니다.`)
+
+/*** 16번 ***/
+const num16 = prompt("문장 입력");
+console.log(num16.split('').reverse().join(''));
+
+/*** 17번 ***/
+const num17 = prompt("키 입력");
+if(num17 >= 150) {
+  console.log('Yes');
+} else {
+  console.log('No');
+}
+
+/*** 18번 ***/
+const num18 = prompt('세 과목 점수 입력').split(' ');
+let sum = 0;
+for(let i = 0; i < num18.length; i++) {
+  sum = sum + parseInt(num18[i], 10);
+}
+console.log(Math.floor(sum/num18.length));
+
+/*** 19번 ***/
+const num19 = prompt().split(' ');
+console.log(Math.pow(parseInt(num19[0], 10), parseInt(num19[1], 10)));
+
+/*** 20번 ***/
+const num20 = ['7', '2'];
+let val1 = Math.floor(parseInt(num20[0], 10)/parseInt(num20[1], 10));
+console.log(val1);
+
+let val2 = parseInt(num20[0], 10)%parseInt(num20[1], 10);
+console.log(val1, val2);
