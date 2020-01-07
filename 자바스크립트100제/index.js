@@ -195,4 +195,96 @@ if(word === word.toUpperCase()) {
 const word = '파인애플은 정말 맛있습니다.';
 const keyword = '애플';
 
-console.log(word.indexOf(keyword))
+console.log(word.indexOf(keyword));
+
+/*** 31번 ***/
+// 답 : 3,5번
+
+/*** 32번 ***/
+const words = "안녕하세요. 저는 제주대학교 컴퓨터공학전공 혜림입니다.";
+console.log(words.split(" ").length);
+
+/*** 33번 ***/
+const nums = "1 2 3 4 5";
+const arr = nums.split(" ").reverse();
+let reverseVal = "";
+
+for (let i = 0; i < arr.length; i++) {
+  reverseVal = reverseVal + (arr[i] + " ");
+}
+console.log(reverseVal);
+
+/*** 34번 ***/
+const unsorted = "176 156 155 165 166 169";
+let sorted = "";
+sorted = unsorted
+  .split(" ")
+  .sort(function(a, b) {
+    return a - b;
+  })
+  .join(" ");
+console.log(sorted);
+
+if (unsorted == sorted) {
+  console.log("Yes");
+} else {
+  console.log("No");
+}
+
+/*** 35번 ***/
+function one(n) {
+  function two(x) {
+    return Math.pow(x, n);
+  }
+  return two;
+}
+
+const a = one(2);
+const b = one(3);
+const c = one(4);
+
+console.log(a(10));
+console.log(b(10));
+console.log(c(10));
+
+/*** 36번 ***/
+const num = 2;
+let result = "";
+for (let i = 0; i < 9; i++) {
+  result = result + (num * (i+1) + " ");
+}
+console.log(result);
+
+/*** 37번 ***/
+const array = ['원범', '원범', '원범', '원범', '원범', '혜원', '혜원', '혜원', '혜원'];
+let result2 = {};
+let winner = "";
+
+for(let index in array) {
+  let val = array[index];
+  result2[val] = result2[val] === undefined ? 1 : result2[val] = result2[val] + 1;
+}
+console.log(result2);
+winner = Object.keys(result2).reduce(function(a, b) {
+  console.log(a, b);
+  return result2[a] > result2[b] ? a: b
+});
+console.log(winner);
+console.log(`${winner}(이)가 총 ${result2[winner]}표로 반장이 되었습니다.`);
+
+/*** 38번 ***/
+const scores = ['97', '86', '75', '55', '72', '80', '64'];
+scores.sort(function(a, b){
+  return a - b;
+})
+console.log(scores);
+let score = [];
+let count = 0;
+while(score.length < 3){
+  let value = scores.pop();
+  if(!score.includes(value)){
+    score.push(value);
+  }
+  count++;
+}
+console.log(count);
