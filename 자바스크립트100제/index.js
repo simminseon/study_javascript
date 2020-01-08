@@ -288,3 +288,5 @@ while(score.length < 3){
   count++;
 }
 console.log(count);
+
+/*** 39번 ***/
