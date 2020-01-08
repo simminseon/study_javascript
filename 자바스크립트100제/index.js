@@ -290,3 +290,19 @@ while(score.length < 3){
 console.log(count);
 
 /*** 39번 ***/
+const word = 'hqllo my namq is hyqwon';
+console.log(word.split('q').join('e'));
+
+/*** 40번 ***/
+const weightLimit = '100';
+const memberCount = '5';
+let count = 0;
+let totalWeight = 0;
+
+for(let i = 0; i < memberCount; i++){
+  totalWeight = totalWeight + parseInt('50', 10);
+  if(totalWeight <= weightLimit){
+    count++;
+  }
+}
+console.log(count);
