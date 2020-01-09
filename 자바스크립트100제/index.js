@@ -306,3 +306,54 @@ for(let i = 0; i < memberCount; i++){
   }
 }
 console.log(count);
+
+/*** 41번 ***/
+const prime = 7;
+function primeFunc(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      console.log("No");
+      return false;
+    }
+  }
+  if (prime === 1) {
+    console.log("No");
+    return false;
+  }
+  console.log("Yes");
+}
+primeFunc(prime);
+
+/*** 42번 ***/
+const day = ["SUN", "MON", "TUE", "WED", "THU", "TRI", "SAT"];
+const month = '5';
+const date = '5';
+function solution(a, b) {
+  const theDay = new Date(`2020-${a}-${b}`);
+  console.log(day[theDay.getDay()]);
+}
+solution(month, date);
+
+/*** 43번 ***/
+let dec = 160;
+console.log(dec.toString(2));
+
+/*** 44번 ***/
+let num = '1234';
+let sum = 0;
+while(num){
+  sum = sum + num%10;
+  num = Math.floor(num/10);
+}
+console.log(sum);
+
+/*** 45번 ***/
+const theDate = new Date();
+console.log(Math.floor(theDate.getTime()/(60*60*24*365*1000))+1970);
+
+/*** 46번 ***/
+let arr = [];
+let total = 0;
+for(let i = 0; i < 20; i++){
+  arr[i] = i + 1;
+}
