@@ -365,3 +365,62 @@ arr.forEach((n) => {
   }
 });
 console.log(total);
+
+/*** 47번 ***/
+const people = {
+  이호준1 : '01050442345',
+  이호준2 : '01050442345',
+  이호준3 : '01050442345',
+  이호준4 : '01050442345',
+  이호준5 : '01050442345',
+  이호준6 : '01050442345'
+}
+let result = new Set();
+for(let key in people) {
+  result.add(people[key]);
+}
+console.log(result.size);
+
+/*** 48번 ***/
+const str = "AAABBBcccddd";
+let arr = [];
+for(let i = 0; i < str.length; i++){
+  if(str[i] === str[i].toUpperCase()){
+    arr.push(str[i].toLowerCase());
+  } else {
+    arr.push(str[i].toUpperCase());
+  }
+}
+console.log(arr.join(''));
+
+/*** 49번 ***/
+let result2 = "10 9 8 7 6 5 4 3 2 1";
+result2 = result2.split(" ").map(n => {
+  return parseInt(n, 10);
+});
+result2.sort((a, b) => {
+  return b - a;
+});
+console.log(result2[0]);
+
+/*** 50번 ***/
+function bubble(arr) {
+  let result = arr.slice();
+  
+  for(let i = 0; i < result.length - 1; i++){
+    for(let j = 0; j < result.length - i; j++) {
+      if(result[j] > result[j + 1]){
+        let value = result[j];
+        result[j] = result[j + 1];
+        result[j + 1] = value;
+      }
+    }
+  }
+  return result;
+}
+
+const items = '5 4 7 9 1 3'.split(' ').map((n) => {
+  return parseInt(n, 10);
+});
+
+console.log(bubble(items));
