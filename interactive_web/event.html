@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>이벤트 위임</title>
+	<style>
+		.menu{display:flex;width:300px;padding:10px;background-color:pink;margin:0 auto}
+		.btn_menu{flex:1;margin:0 5px;line-height:50px;font-size: 25px;font-weight:bold;}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<button type="button" class="btn_menu" data-value="1">버튼1</button>
+		<button type="button" class="btn_menu" data-value="2">버튼2</button>
+		<button type="button" class="btn_menu" data-value="3">버튼3</button>
+	</div>
+	<script>
+		const menu = document.querySelector('.menu');
+
+		function clickHandler(event) {
+			let elem = event.target;
+			if(elem.classList.contains('btn_menu')){
+				console.log(elem);
+			}
+		}
+
+		menu.addEventListener('click', clickHandler);
+	</script>
+</body>
+</html>
