@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>엘리베이터</title>
+</head>
+<body>
+	내 위치 : <input type="number" class="inp_my" name="">
+	A엘리베이터 위치 : <input type="number" class="inp_a" name="">
+	B엘리베이터 위치 : <input type="number" class="inp_b" name="">
+	<button type="button" class="btn_start">작동</button>
+	<div class="result"></div>
+	<script>
+		const eleBtn = document.querySelector('.btn_start');
+
+		eleBtn.addEventListener('click', function() {
+			const result = document.querySelector('.result');
+			let myPos = document.querySelector('.inp_my').value;
+			let aPos = document.querySelector('.inp_a').value;
+			let bPos = document.querySelector('.inp_b').value;
+			const aAbs = Math.abs(aPos - myPos);
+			const bAbs = Math.abs(bPos - myPos);
+
+			if(aAbs == bAbs) {
+				if(aPos < bPos) {
+					result.innerText = 'B 호출';
+				} else {
+					result.innerText = 'A 호출';
+				}
+			} else {
+				if(aAbs < bAbs) {
+					result.innerText = 'A 호출';
+				} else {
+					result.innerText = 'B 호출';
+				}
+			}
+		})
+	</script>
+</body>
+</html>

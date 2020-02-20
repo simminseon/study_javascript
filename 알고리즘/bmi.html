@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bmi 지수 구하기</title>
+</head>
+<body>
+	키: <input type="number" class="inp_height" name="">
+	몸무게 : <input type="number" class="inp_weight" name="">
+	<button type="button" class="btn_bmi">결과보기</button>
+	<script>
+		const bmiBtn = document.querySelector('.btn_bmi');
+
+		bmiBtn.addEventListener('click', function() {
+			let itemHeight = document.querySelector('.inp_height').value;
+			let rateHeight = itemHeight * 0.01;
+			let itemWeight = document.querySelector('.inp_weight').value;
+			const bmi = itemWeight/(rateHeight * rateHeight);
+			let result = document.createElement('div');
+
+			if(bmi){
+				result.classList.add('area_result');
+				result.innerText = bmi;
+				document.body.appendChild(result);
+			}
+		})
+
+	</script>
+</body>
+</html>
