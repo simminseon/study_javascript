@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        var numbers = {};
+        numbers.all = [];
+        numbers.prime = [];
+       
+        numbers.isPrime = function(number) {
+            for(var i = 2; i < number; i++){
+                if(number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } // 소수만 리턴
+
+        numbers.addAllNumber = function(max_num) {
+            for (var i = 2; i <= max_num; i++) {
+                this.all.push(i);
+            }
+        } // 모든 숫자 배열
+
+        numbers.calcPrimes = function() {
+            for(var i = 0; i < this.all.length; i++) {
+                var n = this.all[i];
+                if(this.isPrime(n)) {
+                    this.prime.push(n);
+                }
+            }
+        } // 소수인것만 prime 배열에 넣기
+
+        numbers.getAllPrimeNumbers = function() {
+            var ret = "";
+            ret += "<h2>전체 소수의 갯수:" + this.prime.length + "</h2>\n";
+            for (var i = 0; i < this.prime.length; i++) {
+                ret += (i+1) + "번째 소수: " + this.prime[i] + "<br>\n";
+            }
+            return ret;
+        };
+
+        numbers.addAllNumber(10000);
+        numbers.calcPrimes();
+        document.getElementById('result').innerHTML = numbers.getAllPrimeNumbers();
+    </script>
+</body>
+</html>
